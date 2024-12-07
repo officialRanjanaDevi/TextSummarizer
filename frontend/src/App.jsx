@@ -10,7 +10,7 @@ const App = () => {
     setSummary("");
     e.preventDefault();
     setLoading(true)
-    const response = await fetch("http://localhost:4000/textSummarizer", {
+    const response = await fetch(`${import.meta.env.VITE_SERVER}/textSummarizer`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
