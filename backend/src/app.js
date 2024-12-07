@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ['http://localhost:5173',"*"], 
+  origin: ['https://text-summarizer-mauve.vercel.app/'], 
   credentials: true, 
 }));
 
@@ -30,7 +30,6 @@ app.get("/", (req, res) => {
  
 app.post("/textSummarizer", async(req, res) => {
   const {text,size,prompt}=req.body;
-  console.log(req.body)
   try{
     const response =await anthropic.messages.create({
       model:'claude-3-5-sonnet-20240620',
