@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ['https://text-summarizer-mauve.vercel.app/'], 
+  origin: ["https://text-summarizer-mauve.vercel.app"], 
   credentials: true, 
 }));
 
